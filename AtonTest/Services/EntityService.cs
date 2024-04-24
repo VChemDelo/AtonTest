@@ -24,7 +24,7 @@ namespace AtonTest.Services
             IsUserLoginUnique(newUserLogin);
 
             if(!latinLettersAndNumbers.Match(newUserLogin).Success || !latinLettersAndNumbers.Match(newUserPassword).Success || !latinLettersAndNumbers.Match(newUserName).Success) 
-                throw new ValidateLoginPasswordNameException();
+                throw new ValidateLogPassNameException();
 
 
             User userToCreate = new User()
@@ -60,7 +60,7 @@ namespace AtonTest.Services
             var user = _dbContext.Users.First(u => u.Login == userLogin);
 
             if (!latinLettersAndNumbers.Match(nameTochange).Success)
-                throw new ValidateLoginPasswordNameException();
+                throw new ValidateLogPassNameException();
 
             user.Name = nameTochange;
             user.ModifiedBy = modifiedBy;
@@ -97,7 +97,7 @@ namespace AtonTest.Services
         public void ChangeUserPassword(string userLogin, string password, string modifiedBy)
         {
             if (!latinLettersAndNumbers.Match(password).Success)
-                throw new ValidateLoginPasswordNameException();
+                throw new ValidateLogPassNameException();
 
             var user = _dbContext.Users.First(u => u.Login == userLogin);
 
@@ -114,7 +114,7 @@ namespace AtonTest.Services
             IsUserLoginUnique(newLogin);
 
             if (!latinLettersAndNumbers.Match(newLogin).Success)
-                throw new ValidateLoginPasswordNameException();
+                throw new ValidateLogPassNameException();
 
             var user = _dbContext.Users.First(u => u.Login == userLogin);
 

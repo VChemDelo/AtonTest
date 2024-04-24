@@ -4,6 +4,8 @@ namespace AtonTest.Models
 {
     public class User
     {
+        internal DateTime RevokedOn;
+
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
 
