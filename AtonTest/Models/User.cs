@@ -25,6 +25,8 @@ namespace AtonTest.Models
 
         public string ModifiedBy { get; set; } = string.Empty;
 
+        public DateTime ModifiedOn { get; set; } = DateTime.MaxValue;
+
         public DateTime RevorkedOn { get; set; }   =  DateTime.MaxValue;
 
         public string RevorkedBy { get; set; } = string.Empty!;
