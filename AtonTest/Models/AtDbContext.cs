@@ -6,7 +6,8 @@ public partial class AtDbContext : DbContext
 {
 
     
-    public AtDbContext(DbContextOptions<AtDbContext> options) :base(options)
+    public AtDbContext(DbContextOptions<AtDbContext> options) 
+        :base(options)
     {
         Database.EnsureCreated();
     }

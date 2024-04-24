@@ -2,9 +2,6 @@
 using AtonTest.Exceptions;
 using AtonTest.Models;
 using AtonTest.Services;
-using AtonTest.Exceptions;
-using AtonTest.Models;
-using AtonTest.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AtonAssignment.Controllers

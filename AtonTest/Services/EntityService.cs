@@ -19,6 +19,7 @@ namespace AtonTest.Services
         }
 
 
+
         public void CreateUser(string newUserLogin, string newUserPassword, string newUserName, int newUserGender, DateTime newUserBirthday, string createdBy, bool isAdmin = false)
         {
             IsUserLoginUnique(newUserLogin);

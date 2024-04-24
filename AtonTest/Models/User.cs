@@ -31,6 +31,6 @@ namespace AtonTest.Models
 
         public DateTime RevorkedOn { get; set; }   =  DateTime.MaxValue;
 
-        public string RevorkedBy { get; set; } = string.Empty!;
+        public string RevorkedBy { get; set; } = string.Empty;
     }
 }

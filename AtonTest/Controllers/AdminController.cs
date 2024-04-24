@@ -14,11 +14,14 @@ namespace AtonTest.Controllers
         private readonly AtDbContext _dbContext;
         private readonly EntityService _entityService;
 
+
+
         public AdminController(AtDbContext dbContext, EntityService entityService)
         {
             _dbContext = dbContext;
             _entityService = entityService;
         }
+
 
         [HttpPost]
         public IActionResult CreateUserAdmin(string login, string password, string newUserLogin, string newUserPassword, string newUserName, int newUserGender, DateTime newUserBirthday, bool isAdmin)
